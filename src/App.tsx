@@ -12,11 +12,11 @@ const DEFAULTS: CertState = {
   clinic: {
     name: "Consultorio Dra. Pamela Pino",
     doctorName: "Dra. Pamela Pino",
-    email: "dra.pamela.pino@gmail.com",
-    phone: "0982785653",
-    address: "Manta, Cda.  y calle 10",
+    email: ": pinopamela8@gmail.com",
+    phone: "0987516805",
+    address: "Ciudad Jardín 2da entrada villa 5",
     place: "Manta, Ecuador",
-    issueDate: todayISO(),
+    issueDate: ysterdayISO(),
   },
   patient: {
     fullName: "Rhonnie Duarte",
@@ -34,7 +34,7 @@ const DEFAULTS: CertState = {
     symptoms: "Sí",
     type: "Enfermedad",
     days: "1",
-    from: todayISO(),
+    from: yesterdayISO(),
     to: todayISO(),
   },
   sign: {
