@@ -115,21 +115,19 @@ export default function Certificate({
   isPrint?: boolean;
 }) {
   const { clinic, patient, reason, sign } = state;
-
   const days = parseInt(reason.days, 10);
   const daysFilled =
     reason.days && !isNaN(days) ? `${days} (${numberToWords(days).toLowerCase()} ${days === 1 ? "día" : "días"})` : "";
   const lugarFecha = [clinic.place, clinic.issueDate ? dateHuman(clinic.issueDate) : ""]
     .filter(Boolean)
     .join(", ");
-  // La fecha "hasta" coincide con "desde + días concedidos" en el documento
+  
   const toIso =
     reason.to || (reason.from && daysFilled ? (addDaysISO(reason.from, Math.max(days - 1, 0)) ?? "") : "");
   const fromLong = dateInWords(reason.from);
   const toLong = dateInWords(toIso);
-
   const doctor = clinic.doctorName || "Nombre del médico";
-  const sealName = doctor.replace(/^Dr\.?\s+/i, "").toUpperCase() || "MÉDICO TITULAR";
+  const sealName = doctor.replace(/^Dr.?\s+/i, "").toUpperCase() || "MÉDICO TITULAR";
 
   return (
     <div
@@ -141,6 +139,7 @@ export default function Certificate({
         className="flex items-center gap-5 px-8 py-5"
         style={{ background: `linear-gradient(115deg, ${banner.from} 0%, ${banner.to} 100%)` }}
       >
+        {/* LOGO IZQUIERDO */}
         <div className="flex w-[78px] shrink-0 items-center justify-center">
           <div className="flex h-[78px] w-[78px] items-center justify-center rounded-full bg-white/15 p-1.5 ring-2 ring-white/40">
             {state.logo ? (
@@ -150,6 +149,8 @@ export default function Certificate({
             )}
           </div>
         </div>
+
+        {/* TEXTO CENTRAL */}
         <div className="min-w-0 flex-1 text-center">
           <p className="font-display text-[13px] font-bold tracking-[0.4em] text-white/85">
             CONSULTORIO MÉDICO
@@ -159,17 +160,30 @@ export default function Certificate({
             {(clinic.name || "Consultorio médico").toUpperCase()}
           </p>
         </div>
+
+        {/* LOGO DERECHO (cambia con el logo subido) */}
         <div className="flex w-[78px] shrink-0 items-center justify-center">
-          <CaduceusMini className="h-14 w-auto text-white/30" />
+          {state.logo ? (
+            <img src={state.logo} alt="Logo" className="h-14 w-auto rounded-full object-contain opacity-70" />
+          ) : (
+            <CaduceusMini className="h-14 w-auto text-white/30" />
+          )}
         </div>
       </div>
+
       <div className="h-[6px]" style={{ background: banner.deep }} />
 
-      {/* Sello de agua */}
+      {/* MARCA DE AGUA CENTRAL (cambia con el logo subido) */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <div className="h-[470px] w-[470px] opacity-[0.055]">
-          <Seal text="CONSULTORIO MÉDICO" name={sealName} color={banner.deep} />
-        </div>
+        {state.logo ? (
+          <div className="h-[470px] w-[470px] opacity-[0.08]">
+            <img src={state.logo} alt="" className="h-full w-full object-contain" />
+          </div>
+        ) : (
+          <div className="h-[470px] w-[470px] opacity-[0.055]">
+            <Seal text="CONSULTORIO MÉDICO" name={sealName} color={banner.deep} />
+          </div>
+        )}
       </div>
 
       {/* CUERPO */}
