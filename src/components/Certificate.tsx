@@ -161,7 +161,7 @@ export default function Certificate({
           </p>
         </div>
 
-        {/* LOGO DERECHO (cambia con el logo subido) */}
+        {/* LOGO DERECHO */}
         <div className="flex w-[78px] shrink-0 items-center justify-center">
           {state.logo ? (
             <img src={state.logo} alt="Logo" className="h-14 w-auto rounded-full object-contain opacity-70" />
@@ -173,14 +173,14 @@ export default function Certificate({
 
       <div className="h-[6px]" style={{ background: banner.deep }} />
 
-      {/* MARCA DE AGUA CENTRAL (cambia con el logo subido) */}
+      {/* MARCA DE AGUA CENTRAL - CORREGIDO */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
         {state.logo ? (
-          <div className="h-[380px] w-[380px] opacity-[0.08]">
+          <div className="h-[350px] w-[350px] opacity-[0.08]">
             <img src={state.logo} alt="" className="h-full w-full object-contain" />
           </div>
         ) : (
-          <div className="h-[380px] w-[380px] opacity-[0.06]">
+          <div className="h-[350px] w-[350px] opacity-[0.06]">
             <Seal text="CONSULTORIO MÉDICO" name={sealName} color={banner.deep} />
           </div>
         )}
