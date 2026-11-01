@@ -10,42 +10,42 @@ const LS_KEY = "certificamed-v1";
 
 const DEFAULTS: CertState = {
   clinic: {
-    name: "Consultorio Dra. Pamela Pino",
-    doctorName: "Dra. Pamela Pino",
-    email: ": pinopamela8@gmail.com",
-    phone: "0987516805",
-    address: "Ciudad Jardín 2da entrada villa 5",
-    place: "Manta, Ecuador",
+    name: "Consultorio Dra. Pamela Pino ",
+    doctorName: "Dra. Pamela Pino ",
+    email: "pinopamela8@gmail.com ",
+    phone: "0987516805 ",
+    address: "Ciudad Jardín 2da entrada villa 5 ",
+    place: "Manta, Ecuador ",
     issueDate: todayISO(),
   },
   patient: {
-    fullName: "Rhonnie Duarte",
-    address: "Cdla Universitaria, Manta",
-    phone: "0989467002",
-    institution: "Hospital Basico Pichincha",
-    job: "Medico General en Funciones Hospitalarias",
-    cedula: "0915842488",
-    history: "1738",
-    email: "rhonnie.duarte@hbpichincha.gob.ec",
+    fullName: "Rhonnie Duarte ",
+    address: "Cdla Universitaria, Manta ",
+    phone: "0989467002 ",
+    institution: "Hospital Basico Pichincha ",
+    job: "Medico General en Funciones Hospitalarias ",
+    cedula: "0915842488 ",
+    history: "1738 ",
+    email: "rhonnie.duarte@hbpichincha.gob.ec ",
   },
   reason: {
-    diagnosis: "Cefalea y Vòmito",
-    oie: "OIE-10: A97.0",
-    symptoms: "Sí",
-    type: "Enfermedad",
-    days: "1",
+    diagnosis: "Cefalea y Vòmito ",
+    oie: "OIE-10: A97.0 ",
+    symptoms: "Sí ",
+    type: "Enfermedad ",
+    days: "1 ",
     from: todayISO(),
     to: todayISO(),
   },
   sign: {
-    name: "Dra. Pamela Pino",
-    cedula: "1316321874",
-    senscyt: "1016-2019-2099483",
+    name: "Dra. Pamela Pino ",
+    cedula: "1316321874 ",
+    senscyt: "1016-2019-2099483 ",
   },
   logo: null,
   signature: null,
   signed: false,
-  banner: "teal",
+  banner: "teal ",
 };
 
 function loadState(): CertState {
@@ -72,12 +72,12 @@ function loadState(): CertState {
 const I = {
   printer: (
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M6 9V2h12v7" /><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" /><rect x="6" y="14" width="12" height="8" rx="1" />
+      <path d="M6 9V2h12v7" /> <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" /> <rect x="6" y="14" width="12" height="8" rx="1" />
     </svg>
   ),
   pen: (
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 19l7-7 3 3-7 7-3-3z" /><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" /><path d="M2 2l7.586 7.586" /><circle cx="11" cy="11" r="2" />
+      <path d="M12 19l7-7 3 3-7 7-3-3z" /> <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" /> <path d="M2 2l7.586 7.586" /> <circle cx="11" cy="11" r="2" />
     </svg>
   ),
   check: (
@@ -92,17 +92,17 @@ const I = {
   ),
   reset: (
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 12a9 9 0 1 0 3-6.7L3 8" /><path d="M3 3v5h5" />
+      <path d="M3 12a9 9 0 1 0 3-6.7L3 8" /> <path d="M3 3v5h5" />
     </svg>
   ),
   upload: (
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><path d="M17 8l-5-5-5 5" /><path d="M12 3v12" />
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /> <path d="M17 8l-5-5-5 5" /> <path d="M12 3v12" />
     </svg>
   ),
   trash: (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 6h18" /><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" /><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+      <path d="M3 6h18" /> <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" /> <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
     </svg>
   ),
   x: (
@@ -141,16 +141,14 @@ const REQUIRED: Array<(s: CertState) => string> = [
 
 export default function App() {
   const [state, setState] = useState<CertState>(loadState);
-  const [view, setView] = useState<"form" | "preview">("form");
+  const [view, setView] = useState<"form" | "preview">("form ");
   const [showReset, setShowReset] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
   const viewportRef = useRef<HTMLDivElement>(null);
   const sheetRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(0.7);
   const [sheetH, setSheetH] = useState(1123);
-
   const banner = BANNERS[state.banner] ?? BANNERS.teal;
 
   /* Persistencia */
@@ -198,7 +196,7 @@ export default function App() {
   const setReason = (f: keyof ReasonData, v: string) =>
     setState((s) => {
       const reason = { ...s.reason, [f]: v };
-      if (f === "from" || f === "days") {
+      if (f === "from " || f === "days ") {
         const d = parseInt(reason.days, 10);
         if (reason.from && !isNaN(d) && d >= 1) {
           const t = addDaysISO(reason.from, d - 1);
@@ -209,7 +207,6 @@ export default function App() {
     });
 
   const filled = REQUIRED.filter((f) => f(state).trim() !== "").length;
-
   const canSign =
     !!state.signature &&
     state.sign.name.trim() !== "" &&
@@ -230,7 +227,7 @@ export default function App() {
     const reader = new FileReader();
     reader.onload = () => {
       setState((s) => ({ ...s, logo: String(reader.result) }));
-      notify("Logo cargado en el banner del certificado.");
+      notify("Logo cargado. Aparecerá en el banner (izquierda y derecha) y como marca de agua.");
     };
     reader.readAsDataURL(file);
   };
@@ -239,27 +236,27 @@ export default function App() {
     setState((s) => ({
       ...s,
       patient: {
-        fullName: "",
-        address: "",
-        phone: "",
-        institution: "",
-        job: "",
-        cedula: "",
-        history: "",
-        email: "",
+        fullName: " ",
+        address: " ",
+        phone: " ",
+        institution: " ",
+        job: " ",
+        cedula: " ",
+        history: " ",
+        email: " ",
       },
       reason: {
-        diagnosis: "",
-        oie: "",
-        symptoms: "Sí",
-        type: "Enfermedad",
-        days: "1",
+        diagnosis: " ",
+        oie: " ",
+        symptoms: "Sí ",
+        type: "Enfermedad ",
+        days: "1 ",
         from: todayISO(),
         to: todayISO(),
       },
       signed: false,
     }));
-    notify("Datos de paciente y motivo reiniciados.");
+    notify("Datos de paciente y motivo reiniciados. ");
   };
 
   const resetAll = () => {
@@ -284,24 +281,23 @@ export default function App() {
   return (
     <>
       {/* ================= APLICACIÓN (se oculta al imprimir) ================= */}
-      <div id="app-shell" className="min-h-screen print:hidden">
+      <div id="app-shell" className="min-h-screen print:hidden ">
         {/* Barra superior */}
-        <header className="sticky top-0 z-30 border-b border-zinc-200 bg-white/90 backdrop-blur">
-          <div className="mx-auto flex max-w-[1500px] flex-wrap items-center gap-x-4 gap-y-2 px-4 py-2.5">
-            <div className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-teal-700 to-teal-400 text-white shadow-sm">
+        <header className="sticky top-0 z-30 border-b border-zinc-200 bg-white/90 backdrop-blur ">
+          <div className="mx-auto flex max-w-[1500px] flex-wrap items-center gap-x-4 gap-y-2 px-4 py-2.5 ">
+            <div className="flex items-center gap-2.5 ">
+              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-teal-700 to-teal-400 text-white shadow-sm ">
                 {I.cross}
               </span>
-              <div className="leading-tight">
-                <h1 className="font-display text-[15px] font-bold tracking-tight text-zinc-900">
+              <div className="leading-tight ">
+                <h1 className="font-display text-[15px] font-bold tracking-tight text-zinc-900 ">
                   CertificaMed
                 </h1>
-                <p className="text-[11px] font-medium text-zinc-500">
+                <p className="text-[11px] font-medium text-zinc-500 ">
                   Generador de certificados médicos
                 </p>
               </div>
             </div>
-
             <div className="ml-auto flex flex-wrap items-center gap-2">
               <span
                 className={cn(
@@ -319,7 +315,6 @@ export default function App() {
                 />
                 {filled}/{REQUIRED.length} campos
               </span>
-
               <button type="button" onClick={newPatient} className={cn(btn, "border border-zinc-300 bg-white text-zinc-600 hover:bg-zinc-50")}>
                 {I.plus} Nuevo paciente
               </button>
@@ -350,7 +345,6 @@ export default function App() {
               </button>
             </div>
           </div>
-
           {/* Pestañas en móvil */}
           <div className="mx-auto flex max-w-[1500px] gap-1 px-4 pb-2 lg:hidden">
             {(["form", "preview"] as const).map((v) => (
@@ -557,7 +551,7 @@ export default function App() {
                         type="button"
                         onClick={() => {
                           setState((s) => ({ ...s, logo: null }));
-                          notify("Logo retirado del banner.");
+                          notify("Logo retirado del certificado.");
                         }}
                         className={cn(btn, "justify-center border border-zinc-200 bg-white px-2 text-[11px] text-zinc-400 hover:text-rose-600")}
                       >
@@ -566,9 +560,9 @@ export default function App() {
                     )}
                   </div>
                   <span className="ml-auto hidden text-right text-[11px] leading-tight text-zinc-400 sm:block">
-                    Aparece a la izquierda
+                    Aparece en 3 lugares:
                     <br />
-                    del banner, a color
+                    banner (izq. y der.) y marca de agua
                   </span>
                 </div>
               </Field>
