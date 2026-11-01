@@ -174,13 +174,13 @@ export default function Certificate({
       <div className="h-[6px]" style={{ background: banner.deep }} />
 
       {/* MARCA DE AGUA CENTRAL (cambia con el logo subido) */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
         {state.logo ? (
-          <div className="h-[470px] w-[470px] opacity-[0.08]">
+          <div className="h-[380px] w-[380px] opacity-[0.08]">
             <img src={state.logo} alt="" className="h-full w-full object-contain" />
           </div>
         ) : (
-          <div className="h-[470px] w-[470px] opacity-[0.055]">
+          <div className="h-[380px] w-[380px] opacity-[0.06]">
             <Seal text="CONSULTORIO MÉDICO" name={sealName} color={banner.deep} />
           </div>
         )}
