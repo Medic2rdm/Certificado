@@ -20,13 +20,13 @@ const DEFAULTS: CertState = {
   },
   patient: {
     fullName: "Rhonnie Duarte",
-    address: "Manta 2000",
+    address: "Cdla Universitaria, Manta",
     phone: "0989467002",
     institution: "Hospital Basico Pichincha",
     job: "Medico General en Funciones Hospitalarias",
     cedula: "0915842488",
-    history: "0001",
-    email: "rhonnie.duarte@hbp.com",
+    history: "1738",
+    email: "rhonnie.duarte@hbpichincha.gob.ec",
   },
   reason: {
     diagnosis: "Cefalea y Vòmito",
@@ -39,8 +39,8 @@ const DEFAULTS: CertState = {
   },
   sign: {
     name: "Dra. Pamela Pino",
-    cedula: "1709876543",
-    senscyt: "2026-045871",
+    cedula: "1316321874",
+    senscyt: "1016-2019-2099483",
   },
   logo: null,
   signature: null,
